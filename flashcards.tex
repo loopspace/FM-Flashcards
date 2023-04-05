@@ -1,0 +1,572 @@
+
+\documentclass[12pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{xcolor} %colour package
+\usepackage{setspace}
+\usepackage{enumitem} % numbering package
+\usepackage{amssymb} % lettered bullet points
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{scopes}
+\usetikzlibrary{positioning}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\usepackage{_shortcuts}
+
+\usepackage[explicit]{titlesec}
+\title{FM To Learn}
+\author{ksh }
+\date{March 2023}
+
+\begin{document}
+\pagestyle{empty}
+\begin{tcolorbox}[arc=0mm,
+                skin=bicolor,
+                colback=white,
+                colbacklower=white,
+                sidebyside,
+                valign = center,
+                overlay={\draw[tcbcolframe, line width=.5mm] (segmentation.north)--(segmentation.south);},
+                equal height group=A]
+
+    \vspace{2mm}
+Vector equation of a line with cross product
+    \tcblower
+$$(\textbf{r}-\textbf{a})\times \textbf{b}=\textbf{0}$$\\
+where\\
+\textbf{a} is the position vector of a point the line passes through\\
+\textbf{b} is the direction vector
+\end{tcolorbox}
+\vspace{2cm}
+\begin{tcolorbox}[arc=0mm,
+                skin=bicolor,
+                sidebyside,
+                equal height group=A,
+                colback=white,
+                colbacklower=white,
+                valign = center,
+                overlay={\draw[tcbcolframe, line width=.5mm] (segmentation.north)--(segmentation.south);}]
+
+    \vspace{2mm}
+Shortest distance between skew lines
+\[ l_1: \textbf{r}=\textbf{a}+\lambda \textbf{b}\]
+\[ l_2: \textbf{r}=\textbf{c}+\mu \textbf{d}\]
+    \tcblower
+\[\left|\frac{(\textbf{a}-\textbf{c}).(\textbf{b}\times \textbf{d})}{|\textbf{b}\times\textbf{d}|}\right|\]
+ 
+\end{tcolorbox}
+\vspace{2cm}
+\begin{tcolorbox}[arc=0mm,
+                skin=bicolor,
+                sidebyside,
+                equal height group=A,
+                colback=white,
+                colbacklower=white,
+                valign = center,
+                overlay={\draw[tcbcolframe, line width=.5mm] (segmentation.north)--(segmentation.south);}]
+
+    \vspace{2mm}
+Area of a triangle
+
+
+    \tcblower
+\[\frac{1}{2}|\textbf{a}\times \textbf{b}|\]
+\end{tcolorbox}
+\vspace{2cm}
+\begin{tcolorbox}[arc=0mm,
+                skin=bicolor,
+                sidebyside,
+                equal height group=A,
+                colback=white,
+                colbacklower=white,
+                valign = center,
+                overlay={\draw[tcbcolframe, line width=.5mm] (segmentation.north)--(segmentation.south);}]
+
+    \vspace{2mm}
+Area of a parallelogram
+
+
+    \tcblower
+\[|\textbf{a}\times \textbf{b}|\]
+\end{tcolorbox}
+\vspace{2cm}
+\begin{tcolorbox}[arc=0mm,
+                skin=bicolor,
+                sidebyside,
+                equal height group=A,
+                colback=white,
+                colbacklower=white,
+                valign = center,
+                overlay={\draw[tcbcolframe, line width=.5mm] (segmentation.north)--(segmentation.south);}]
+
+    \vspace{2mm}
+Volume of a Parallelepiped
+
+
+    \tcblower
+\[|\textbf{a}.\textbf{b}\times \textbf{c}|\]
+\end{tcolorbox}
+\vspace{2cm}
+\begin{tcolorbox}[arc=0mm,
+                skin=bicolor,
+                sidebyside,
+                equal height group=A,
+                colback=white,
+                colbacklower=white,
+                valign = center,
+                overlay={\draw[tcbcolframe, line width=.5mm] (segmentation.north)--(segmentation.south);}]
+
+    \vspace{2mm}
+Volume of a Tetrahedron
+
+
+    \tcblower
+\[\frac{1}{6}|\textbf{a}.\textbf{b}\times \textbf{c}|\]
+\end{tcolorbox}
+\vspace{2cm}
+\begin{tcolorbox}[arc=0mm,
+                skin=bicolor,
+                sidebyside,
+                equal height group=A,
+                colback=white,
+                colbacklower=white,
+                valign = center,
+                overlay={\draw[tcbcolframe, line width=.5mm] (segmentation.north)--(segmentation.south);}]
+
+    \vspace{2mm}
+\textit{t}-formula for $\sin \theta$\\
+where $t=\tan \frac{\theta}{2}$
+    \tcblower
+\[\sin \theta=\frac{2t}{1+t^2}\]
+\end{tcolorbox}
+\vspace{2cm}
+
+\begin{tcolorbox}[arc=0mm,
+                skin=bicolor,
+                sidebyside,
+                equal height group=A,
+                colback=white,
+                colbacklower=white,
+                valign = center,
+                overlay={\draw[tcbcolframe, line width=.5mm] (segmentation.north)--(segmentation.south);}]
+
+    \vspace{2mm}
+\textit{t}-formula for $\cos \theta$\\
+where $t=\tan \frac{\theta}{2}$
+    \tcblower
+\[\cos \theta=\frac{1-t^2}{1+t^2}\]
+\end{tcolorbox}
+
+\vspace{2cm}
+\begin{tcolorbox}[arc=0mm,
+                skin=bicolor,
+                sidebyside,
+                equal height group=A,
+                colback=white,
+                colbacklower=white,
+                valign = center,
+                overlay={\draw[tcbcolframe, line width=.5mm] (segmentation.north)--(segmentation.south);}]
+
+    \vspace{2mm}
+\textit{t}-formula for $\tan \theta$\\
+where $t=\tan \frac{\theta}{2}$
+    \tcblower
+\[\tan \theta=\frac{2t}{1-t^2}\]
+\end{tcolorbox}
+\vspace{2cm}
+\begin{tcolorbox}[arc=0mm,
+                skin=bicolor,
+                sidebyside,
+                equal height group=A,
+                colback=white,
+                colbacklower=white,
+                valign = center,
+                overlay={\draw[tcbcolframe, line width=.5mm] (segmentation.north)--(segmentation.south);}]
+
+    \vspace{2mm}
+\textit{t}-formula for $\dydx{t}{\theta}$\\
+(Weierstrass substitution)\\
+where $t=\tan \frac{\theta}{2}$
+    \tcblower
+\[\dydx{t}{\theta}=\frac{1}{2}(1+t^2)\]
+\end{tcolorbox}
+\vspace{2cm}
+\begin{tcolorbox}[arc=0mm,
+                skin=bicolor,
+                sidebyside,
+                equal height group=A,
+                colback=white,
+                colbacklower=white,
+                valign = center,
+                halign lower=center,
+                overlay={\draw[tcbcolframe, line width=.5mm] (segmentation.north)--(segmentation.south);}]
+
+    \vspace{2mm}
+Simpson's rule for 
+\[\int_a^b y\; \mathrm{d}x\]
+    \tcblower
+\begin{align*}
+\approx \frac{1}{3}h & \{ (y_0+y_{2n})\\ & +4(y_1+...+y_{2n-1}) \\ & +2(y_2+...+y_{2n-2})\}
+\end{align*}
+where $h=\frac{b-a}{2n}$
+
+\end{tcolorbox}
+\vspace{2cm}
+\begin{tcolorbox}[arc=0mm,
+                skin=bicolor,
+                sidebyside,
+                equal height group=A,
+                colback=white,
+                colbacklower=white,
+                valign = center,
+                overlay={\draw[tcbcolframe, line width=.5mm] (segmentation.north)--(segmentation.south);}]
+
+    \vspace{2mm}
+Taylor series powers of $x$
+    \tcblower
+\[f(x+a)=\sum_{n=0}^\infty{\frac{f^{(n)}(a)x^n}{n!}}\]
+\end{tcolorbox}
+\vspace{2cm}
+
+\begin{tcolorbox}[arc=0mm,
+                skin=bicolor,
+                sidebyside,
+                equal height group=A,
+                colback=white,
+                colbacklower=white,
+                valign = center,
+                overlay={\draw[tcbcolframe, line width=.5mm] (segmentation.north)--(segmentation.south);}]
+
+    \vspace{2mm}
+Leibnitz's formula for $$\dydx{^ny}{x^n}$$
+    \tcblower
+\[\dydx{^ny}{x^n}= \sum_{k=0}^n{\binom{n}{k} \dydx{^ku}{x^k}\dydx{^{(n-k)}u}{x^{(n-k)}}}\]
+\end{tcolorbox}
+\vspace{2cm}
+
+\begin{tcolorbox}[arc=0mm,
+                skin=bicolor,
+                sidebyside,
+                equal height group=A,
+                colback=white,
+                colbacklower=white,
+                valign = center,
+                halign lower= center,
+                overlay={\draw[tcbcolframe, line width=.5mm] (segmentation.north)--(segmentation.south);}]
+
+    \vspace{2mm}
+$3 \times 3$ matrix for reflection in the plane $x=0$
+    \tcblower
+$\begin{pmatrix}
+-1 &0&0\\0&1&0\\0&0&1
+\end{pmatrix}$
+\end{tcolorbox}
+\vspace{2cm}
+
+\begin{tcolorbox}[arc=0mm,
+                skin=bicolor,
+                sidebyside,
+                equal height group=A,
+                colback=white,
+                colbacklower=white,
+                valign = center,
+                halign lower= center,
+                overlay={\draw[tcbcolframe, line width=.5mm] (segmentation.north)--(segmentation.south);}]
+
+    \vspace{2mm}
+$3 \times 3$ matrix for reflection in the plane $y=0$
+    \tcblower
+$\begin{pmatrix}
+1 &0&0\\0&-1&0\\0&0&1
+\end{pmatrix}$
+\end{tcolorbox}
+\vspace{2cm}
+
+\begin{tcolorbox}[arc=0mm,
+                skin=bicolor,
+                sidebyside,
+                equal height group=A,
+                colback=white,
+                colbacklower=white,
+                valign = center,
+                halign lower= center,
+                overlay={\draw[tcbcolframe, line width=.5mm] (segmentation.north)--(segmentation.south);}]
+
+    \vspace{2mm}
+$3 \times 3$ matrix for reflection in the plane $z=0$
+    \tcblower
+$\begin{pmatrix}
+1 &0&0\\0&1&0\\0&0&-1
+\end{pmatrix}$
+\end{tcolorbox}
+\vspace{2cm}
+
+\begin{tcolorbox}[arc=0mm,
+                skin=bicolor,
+                sidebyside,
+                equal height group=A,
+                colback=white,
+                colbacklower=white,
+                valign = center,
+                halign lower= center,
+                overlay={\draw[tcbcolframe, line width=.5mm] (segmentation.north)--(segmentation.south);}]
+
+    \vspace{2mm}
+$3 \times 3$ matrix for rotation about the $x$-axis
+    \tcblower
+$\begin{pmatrix}
+1 &0&0\\0&\cos \theta&-\sin\theta\\0&\sin\theta&\cos\theta
+\end{pmatrix}$
+\end{tcolorbox}
+\vspace{2cm}
+
+\begin{tcolorbox}[arc=0mm,
+                skin=bicolor,
+                sidebyside,
+                equal height group=A,
+                colback=white,
+                colbacklower=white,
+                valign = center,
+                halign lower= center,
+                overlay={\draw[tcbcolframe, line width=.5mm] (segmentation.north)--(segmentation.south);}]
+
+    \vspace{2mm}
+$3 \times 3$ matrix for rotation about the $y$-axis
+    \tcblower
+$\begin{pmatrix}
+\cos\theta &0&\sin\theta\\0&1&0\\-\sin\theta&0&\cos\theta
+\end{pmatrix}$
+\end{tcolorbox}
+\vspace{2cm}
+
+\begin{tcolorbox}[arc=0mm,
+                skin=bicolor,
+                sidebyside,
+                equal height group=A,
+                colback=white,
+                colbacklower=white,
+                valign = center,
+                halign lower= center,
+                overlay={\draw[tcbcolframe, line width=.5mm] (segmentation.north)--(segmentation.south);}]
+
+    \vspace{2mm}
+$3 \times 3$ matrix for rotation about the $z$-axis
+    \tcblower
+$\begin{pmatrix}
+\cos\theta &-\sin\theta&0\\\sin\theta&\cos\theta&0\\0&0&1
+\end{pmatrix}$
+\end{tcolorbox}
+
+\vspace{2cm}
+
+\begin{tcolorbox}[arc=0mm,
+                skin=bicolor,
+                sidebyside,
+                equal height group=A,
+                colback=white,
+                colbacklower=white,
+                valign = center,
+                halign lower= center,
+                overlay={\draw[tcbcolframe, line width=.5mm] (segmentation.north)--(segmentation.south);}]
+
+    \vspace{2mm}
+Complex loci $|z-a|=b$
+    \tcblower
+Circle centre $a$, radius $b$
+\end{tcolorbox}
+\vspace{2cm}
+
+\begin{tcolorbox}[arc=0mm,
+                skin=bicolor,
+                sidebyside,
+                equal height group=A,
+                colback=white,
+                colbacklower=white,
+                valign = center,
+                halign lower= center,
+                overlay={\draw[tcbcolframe, line width=.5mm] (segmentation.north)--(segmentation.south);}]
+
+    \vspace{2mm}
+Complex loci $|z-a|=|z-b|$
+    \tcblower
+Perpendicular bisector of the line joining the complex numbers $a$ and $b$
+\end{tcolorbox}
+\vspace{2cm}
+
+\begin{tcolorbox}[arc=0mm,
+                skin=bicolor,
+                sidebyside,
+                equal height group=A,
+                colback=white,
+                colbacklower=white,
+                valign = center,
+                halign lower=left,
+                overlay={\draw[tcbcolframe, line width=.5mm] (segmentation.north)--(segmentation.south);}]
+
+    \vspace{2mm}
+Complex loci $\mathrm{arg}(z-a)=\beta$
+    \tcblower
+Half line from the complex number $a$ at an angle of $\beta$ to the real axis
+\end{tcolorbox}
+\vspace{2cm}
+
+\begin{tcolorbox}[arc=0mm,
+                skin=bicolor,
+                sidebyside,
+                equal height group=A,
+                colback=white,
+                colbacklower=white,
+                valign = center,
+                overlay={\draw[tcbcolframe, line width=.5mm] (segmentation.north)--(segmentation.south);}]
+
+    \vspace{2mm}
+Direction cosines of the line\\ \(\textbf{r}=\textbf{a}+\lambda\textbf{b}\),\\ where \(\textbf{b}=\begin{pmatrix}x\\y\\z\end{pmatrix}\)
+    \tcblower
+The angle that the line makes with the axes.\\
+Angle with the \(x\)-axis, \(\alpha\)\\ \(cos\alpha = \frac{x}{|b|}\)\\
+Angle with the \(y\)-axis, \(\beta\)\\ \(cos\beta = \frac{y}{|b|}\)\\
+Angle with the \(z\)-axis, \(\gamma\)\\ \(cos\gamma = \frac{z}{|b|}\)
+\end{tcolorbox}
+\vspace{2cm}
+\begin{tcolorbox}[arc=0mm,
+                skin=bicolor,
+                sidebyside,
+                equal height group=A,
+                colback=white,
+                colbacklower=white,
+                valign = center,
+                overlay={\draw[tcbcolframe, line width=.5mm] (segmentation.north)--(segmentation.south);}]
+
+    \vspace{2mm}
+Polar graph \(r=p \sec(\alpha-\theta)\)
+    \tcblower
+Straight line\\Convert into \(y=mx+c\) using the addition formula for cosine
+\end{tcolorbox}
+\vspace{2cm}
+\begin{tcolorbox}[arc=0mm,
+                skin=bicolor,
+                sidebyside,
+                equal height group=A,
+                colback=white,
+                colbacklower=white,
+                valign = center,
+                overlay={\draw[tcbcolframe, line width=.5mm] (segmentation.north)--(segmentation.south);}]
+
+    \vspace{2mm}
+Polar graph \(r=a\)
+    \tcblower
+Circle centre the pole, radius \(a\)
+\end{tcolorbox}
+\vspace{2cm}
+\begin{tcolorbox}[arc=0mm,
+                skin=bicolor,
+                sidebyside,
+                equal height group=A,
+                colback=white,
+                colbacklower=white,
+                valign = center,
+                overlay={\draw[tcbcolframe, line width=.5mm] (segmentation.north)--(segmentation.south);}]
+
+    \vspace{2mm}
+Polar graph \(r=2a\cos \theta\)
+    \tcblower
+Circle centre \((a,0)\), radius \(a\)\\
+One symmetric petal
+\end{tcolorbox}
+\vspace{2cm}
+\begin{tcolorbox}[arc=0mm,
+                skin=bicolor,
+                sidebyside,
+                equal height group=A,
+                colback=white,
+                colbacklower=white,
+                valign = center,
+                overlay={\draw[tcbcolframe, line width=.5mm] (segmentation.north)--(segmentation.south);}]
+
+    \vspace{2mm}
+Polar graph \(r=\theta\)
+    \tcblower
+Spiral centred at origin
+\end{tcolorbox}
+\vspace{2cm}
+\begin{tcolorbox}[arc=0mm,
+                skin=bicolor,
+                sidebyside,
+                equal height group=A,
+                colback=white,
+                colbacklower=white,
+                valign = center,
+                overlay={\draw[tcbcolframe, line width=.5mm] (segmentation.north)--(segmentation.south);}]
+
+    \vspace{2mm}
+Polar graph \(r=a\cos n\theta\)
+    \tcblower
+Only considering \(r\geqslant 0\) \\Rose with \(n\) petals spaced at \(\frac{2\pi}{n}\) starting at \((a,0)\)
+\end{tcolorbox}
+\vspace{2cm}
+\begin{tcolorbox}[arc=0mm,
+                skin=bicolor,
+                sidebyside,
+                equal height group=A,
+                colback=white,
+                colbacklower=white,
+                valign = center,
+                halign lower=left,                
+                overlay={\draw[tcbcolframe, line width=.5mm] (segmentation.north)--(segmentation.south);}]
+
+    \vspace{2mm}
+Polar graph \(r=p+q\cos \theta\)\\ \(q\leqslant p<2q\)
+    \tcblower
+Concave curve ``dimple" shaped limaçon
+
+\end{tcolorbox}
+\vspace{2cm}
+\begin{tcolorbox}[arc=0mm,
+                skin=bicolor,
+                sidebyside,
+                equal height group=A,
+                colback=white,
+                colbacklower=white,
+                valign = center,
+                halign lower=left,                
+                overlay={\draw[tcbcolframe, line width=.5mm] (segmentation.north)--(segmentation.south);}]
+
+    \vspace{2mm}
+Polar graph \(r=p+q\cos \theta\)\\ \(p=q\)
+    \tcblower
+Cardioid\\
+
+
+\end{tcolorbox}
+\vspace{2cm}
+\begin{tcolorbox}[arc=0mm,
+                skin=bicolor,
+                sidebyside,
+                equal height group=A,
+                colback=white,
+                colbacklower=white,
+                valign = center,
+                halign lower=left,                
+                overlay={\draw[tcbcolframe, line width=.5mm] (segmentation.north)--(segmentation.south);}]
+
+    \vspace{2mm}
+Polar graph \(r=p+q\cos \theta\)\\\(p\geqslant 2q\)
+    \tcblower
+ Convex curve ``egg" shaped limaçon
+\end{tcolorbox}
+\vspace{2cm}
+\begin{tcolorbox}[arc=0mm,
+                skin=bicolor,
+                sidebyside,
+                equal height group=A,
+                colback=white,
+                colbacklower=white,
+                valign = center,
+                overlay={\draw[tcbcolframe, line width=.5mm] (segmentation.north)--(segmentation.south);}]
+
+    \vspace{2mm}
+Polar graph \(r^2=a^2\cos 2\theta\)
+    \tcblower
+Leminscate (figure-8 shaped)\\ starting at \((a,0)\)
+\end{tcolorbox}
+\end{document}
