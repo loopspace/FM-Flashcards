@@ -18,6 +18,25 @@
 \author{ksh }
 \date{March 2023}
 
+%% Makes it easier to maintain and to change the style of all of them in one go
+\NewEnvironment\IndexCard { m m }
+{
+  \begin{tcolorbox}[arc=0mm,
+                skin=bicolor,
+                colback=white,
+                colbacklower=white,
+                sidebyside,
+                valign = center,
+                overlay={\draw[tcbcolframe, line width=.5mm] (segmentation.north)--(segmentation.south);},
+                equal height group=A]
+  \vspace{2mm}
+  #1
+  \tcblower
+  #2
+  \end{tcolorbox}
+  \vspace{2cm}
+}
+
 \begin{document}
 \pagestyle{empty}
 \begin{tcolorbox}[arc=0mm,
