@@ -1,5 +1,5 @@
-
 \documentclass[12pt]{article}
+\usepackage[paperheight=2.75in,paperwidth=4.75in]{geometry}
 \usepackage{graphicx} % Required for inserting images
 \usepackage{xcolor} %colour package
 \usepackage{setspace}
@@ -13,6 +13,10 @@
 \tcbuselibrary{skins}
 \usepackage{_shortcuts}
 
+\usepackage{pgfmorepages}
+\pgfmorepagesloadextralayouts
+%\pgfpagesuselayout{5 index cards}[a4paper]
+
 \usepackage[explicit]{titlesec}
 \title{FM To Learn}
 \author{ksh }
@@ -21,19 +25,18 @@
 %% Makes it easier to maintain and to change the style of all of them in one go
 \NewDocumentCommand\IndexCard { +m +m }
 {
-  \begin{tcolorbox}[arc=0mm,
-    skin=bicolor,
-    colback=white,
-    colbacklower=white,
-    sidebyside,
-    valign = center,
-    overlay={\draw[tcbcolframe, line width=.5mm] (segmentation.north)--(segmentation.south);},
-    equal height group=A]
-  \vspace{2mm}
-  #1
-  \tcblower
+  %% Vertically and horizontally centre the "name" side 
+  \vspace*{\fill}%
+  \begin{center}
+  #1%
+  \end{center}
+  \vspace*{\fill}%
+  \newpage
+  %% Vertically centre the explanation side
+  \vspace*{\fill}%
   #2
-  \end{tcolorbox}
+  \vspace*{\fill}%
+  \newpage
 }
 
 \begin{document}
