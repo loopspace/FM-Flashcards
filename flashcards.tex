@@ -1,8 +1,14 @@
-\documentclass[12pt]{article}
-\usepackage[paperheight=2.75in,paperwidth=4.75in]{geometry}
+\documentclass[17pt]{extarticle}
+\usepackage[paperheight=2.75in,paperwidth=4.75in,scale=.9]{geometry}
 \usepackage{amssymb} % lettered bullet points
 \usepackage{amsmath}
 \usepackage{_shortcuts}
+
+\usepackage{fontspec}
+\usepackage{unicode-math}
+
+\setmainfont{TeX Gyre Bonum}
+\setmathfont{TeX Gyre Bonum Math}
 
 \usepackage{pgfmorepages}
 \pgfmorepagesloadextralayouts
@@ -29,241 +35,311 @@
   \newpage
 }
 
+\let\vec=\mathbf
+
 \begin{document}
 \pagestyle{empty}
-\IndexCard{
+\IndexCard{%%
 Vector equation of a line with cross product
-}{
-$$(\textbf{r}-\textbf{a})\times \textbf{b}=\textbf{0}$$\\
-where\\
-\textbf{a} is the position vector of a point the line passes through\\
-\textbf{b} is the direction vector
+}{%%
+\[
+    (\vec{r}-\vec{a})\times \vec{b}=\vec{0}
+\]
+where
+\begin{itemize}
+\item \(\vec{a}\) is the position vector of a point the line passes through
+\item \(\vec{b}\) is the direction vector
+\end{itemize}
 }
 
-\IndexCard{
+\IndexCard{%%
 Shortest distance between skew lines
-\[ l_1: \textbf{r}=\textbf{a}+\lambda \textbf{b}\]
-\[ l_2: \textbf{r}=\textbf{c}+\mu \textbf{d}\]
+\begin{align*}
+l_1 &: \vec{r}=\vec{a}+\lambda \vec{b} \\
+l_2 &: \vec{r}=\vec{c}+\mu \vec{d}
+\end{align*}
+}{%
+  \[
+    \left|
+    \frac{
+      (\vec{a}-\vec{c}).(\vec{b}\times \vec{d})
     }{
-\[\left|\frac{(\textbf{a}-\textbf{c}).(\textbf{b}\times \textbf{d})}{|\textbf{b}\times\textbf{d}|}\right|\]
+      |\vec{b}\times\vec{d}|
+    }
+    \right|
+    \]
 }
 
-\IndexCard{
-Area of a triangle
-    }{
-\[\frac{1}{2}|\textbf{a}\times \textbf{b}|\]
+\IndexCard{%
+Area of a Triangle
+    }{%
+\[
+    \frac{1}{2}|\vec{a}\times \vec{b}|
+    \]
 }
 
-\IndexCard{
-Area of a parallelogram
-    }{
-\[|\textbf{a}\times \textbf{b}|\]
+\IndexCard{%
+Area of a Parallelogram
+    }{%
+\[
+    |\vec{a}\times \vec{b}|
+    \]
 }
 
-\IndexCard{
+\IndexCard{%
 Volume of a Parallelepiped
-    }{
-\[|\textbf{a}.\textbf{b}\times \textbf{c}|\]
+    }{%
+\[
+    |\vec{a} \cdot \vec{b}\times \vec{c}|
+    \]
 }
 
-\IndexCard{
+\IndexCard{%
 Volume of a Tetrahedron
-    }{
-\[\frac{1}{6}|\textbf{a}.\textbf{b}\times \textbf{c}|\]
+    }{%
+\[
+\frac{1}{6}|\vec{a} \cdot \vec{b}\times \vec{c}|
+    \]
 }
 
-\IndexCard{
-\textit{t}-formula for $\sin \theta$\\
-where $t=\tan \frac{\theta}{2}$
-    }{
-\[\sin \theta=\frac{2t}{1+t^2}\]
-}
-
-
-\IndexCard{
-\textit{t}-formula for $\cos \theta$\\
-where $t=\tan \frac{\theta}{2}$
-    }{
-\[\cos \theta=\frac{1-t^2}{1+t^2}\]
+\IndexCard{%
+\(t\)--formula for \(\sin \theta\)\\
+where \(t=\tan \frac{\theta}{2}\)
+    }{%
+\[
+\sin \theta=\frac{2t}{1+t^2}
+\]
 }
 
 
-\IndexCard{
-\textit{t}-formula for $\tan \theta$\\
-where $t=\tan \frac{\theta}{2}$
-    }{
-\[\tan \theta=\frac{2t}{1-t^2}\]
+\IndexCard{%
+\(t\)--formula for \(\cos \theta\)\\
+where \(t=\tan \frac{\theta}{2}\)
+    }{%
+\[
+\cos \theta=\frac{1-t^2}{1+t^2}
+\]
 }
 
-\IndexCard{
-\textit{t}-formula for $\dydx{t}{\theta}$\\
+
+\IndexCard{%
+\(t\)--formula for \(\tan \theta\)\\
+where \(t=\tan \frac{\theta}{2}\)
+    }{%
+\[
+\tan \theta=\frac{2t}{1-t^2}
+\]
+}
+
+\IndexCard{%
+\(t\)--formula for \(\dydx{t}{\theta}\)\\
 (Weierstrass substitution)\\
-where $t=\tan \frac{\theta}{2}$
-    }{
-\[\dydx{t}{\theta}=\frac{1}{2}(1+t^2)\]
+where \(t=\tan \frac{\theta}{2}\)
+    }{%
+\[
+\dydx{t}{\theta}=\frac{1}{2}(1+t^2)
+\]
 }
 
-\IndexCard{
+\IndexCard{%
 Simpson's rule for 
 \[\int_a^b y\; \mathrm{d}x\]
-    }{
+    }{%
 \begin{align*}
-\approx \frac{1}{3}h & \{ (y_0+y_{2n})\\ & +4(y_1+...+y_{2n-1}) \\ & +2(y_2+...+y_{2n-2})\}
+\approx \frac{1}{3} h & \big( (y_0+y_{2n})\\
+ & +4(y_1+...+y_{2n-1}) \\
+ & +2(y_2+...+y_{2n-2}) \big)
 \end{align*}
-where $h=\frac{b-a}{2n}$
+where \(h=\frac{b-a}{2n}\)
 }
 
-\IndexCard{
-Taylor series powers of $x$
-    }{
-\[f(x+a)=\sum_{n=0}^\infty{\frac{f^{(n)}(a)x^n}{n!}}\]
-}
-
-
-\IndexCard{
-Leibnitz's formula for $$\dydx{^ny}{x^n}$$
-    }{
-\[\dydx{^ny}{x^n}= \sum_{k=0}^n{\binom{n}{k} \dydx{^ku}{x^k}\dydx{^{(n-k)}u}{x^{(n-k)}}}\]
+\IndexCard{%
+Taylor series powers of \(x\)
+    }{%
+\[
+f(x+a)=\sum_{n=0}^\infty{\frac{f^{(n)}(a)x^n}{n!}}
+\]
 }
 
 
-\IndexCard{
-$3 \times 3$ matrix for reflection in the plane $x=0$
-    }{
-$\begin{pmatrix}
+\IndexCard{%
+Leibnitz's formula for 
+%
+\[
+  \dydx{^ny}{x^n}
+\]
+    }{%
+\[
+\dydx{^ny}{x^n}= \sum_{k=0}^n{\binom{n}{k} \dydx{^ku}{x^k}\dydx{^{(n-k)}u}{x^{(n-k)}}}
+\]
+}
+
+
+\IndexCard{%
+\(3 \times 3\) matrix for reflection in the plane \(x=0\)
+    }{%
+\[
+\begin{pmatrix}
 -1 &0&0\\0&1&0\\0&0&1
-\end{pmatrix}$
+\end{pmatrix}
+\]
 }
 
 
-\IndexCard{
-$3 \times 3$ matrix for reflection in the plane $y=0$
-    }{
-$\begin{pmatrix}
+\IndexCard{%
+\(3 \times 3\) matrix for reflection in the plane \(y=0\)
+    }{%
+\[
+\begin{pmatrix}
 1 &0&0\\0&-1&0\\0&0&1
-\end{pmatrix}$
+\end{pmatrix}
+\]
 }
 
 
-\IndexCard{
-$3 \times 3$ matrix for reflection in the plane $z=0$
-    }{
-$\begin{pmatrix}
+\IndexCard{%
+\(3 \times 3\) matrix for reflection in the plane \(z=0\)
+    }{%
+\[
+\begin{pmatrix}
 1 &0&0\\0&1&0\\0&0&-1
-\end{pmatrix}$
+\end{pmatrix}
+\]
 }
 
 
-\IndexCard{
-$3 \times 3$ matrix for rotation about the $x$-axis
-    }{
-$\begin{pmatrix}
+\IndexCard{%
+\(3 \times 3\) matrix for rotation about the \(x\)--axis
+    }{%
+\[
+\begin{pmatrix}
 1 &0&0\\0&\cos \theta&-\sin\theta\\0&\sin\theta&\cos\theta
-\end{pmatrix}$
+\end{pmatrix}
+\]
 }
 
 
-\IndexCard{
-$3 \times 3$ matrix for rotation about the $y$-axis
-    }{
-$\begin{pmatrix}
+\IndexCard{%
+\(3 \times 3\) matrix for rotation about the \(y\)--axis
+    }{%
+\[
+\begin{pmatrix}
 \cos\theta &0&\sin\theta\\0&1&0\\-\sin\theta&0&\cos\theta
-\end{pmatrix}$
+\end{pmatrix}
+\]
 }
 
 
-\IndexCard{
-$3 \times 3$ matrix for rotation about the $z$-axis
-    }{
-$\begin{pmatrix}
+\IndexCard{%
+\(3 \times 3\) matrix for rotation about the \(z\)--axis
+    }{%
+\[
+\begin{pmatrix}
 \cos\theta &-\sin\theta&0\\\sin\theta&\cos\theta&0\\0&0&1
-\end{pmatrix}$
+\end{pmatrix}
+\]
 }
 
 
 
-\IndexCard{
-Complex loci $|z-a|=b$
-    }{
-Circle centre $a$, radius $b$
+\IndexCard{%
+Complex loci \(|z-a|=b\)
+    }{%
+Circle centre \(a\), radius \(b\)
 }
 
 
-\IndexCard{
-Complex loci $|z-a|=|z-b|$
-    }{
-Perpendicular bisector of the line joining the complex numbers $a$ and $b$
+\IndexCard{%
+Complex loci \(|z-a|=|z-b|\)
+    }{%
+Perpendicular bisector of the line joining the complex numbers \(a\) and \(b\)
 }
 
 
-\IndexCard{
-Complex loci $\mathrm{arg}(z-a)=\beta$
-    }{
-Half line from the complex number $a$ at an angle of $\beta$ to the real axis
+\IndexCard{%
+Complex loci \(\operatorname{arg}(z-a)=\beta\)
+    }{%
+Half line from the complex number \(a\) at an angle of \(\beta\) to the real axis.
 }
 
 
-\IndexCard{
-Direction cosines of the line\\ \(\textbf{r}=\textbf{a}+\lambda\textbf{b}\),\\ where \(\textbf{b}=\begin{pmatrix}x\\y\\z\end{pmatrix}\)
-    }{
-The angle that the line makes with the axes.\\
-Angle with the \(x\)-axis, \(\alpha\)\\ \(cos\alpha = \frac{x}{|b|}\)\\
-Angle with the \(y\)-axis, \(\beta\)\\ \(cos\beta = \frac{y}{|b|}\)\\
-Angle with the \(z\)-axis, \(\gamma\)\\ \(cos\gamma = \frac{z}{|b|}\)
+\IndexCard{%
+Direction cosines of the line
+%
+\[
+  \vec{r}=\vec{a}+\lambda\vec{b}
+\]
+%
+ where \(\vec{b}=\begin{pmatrix}x\\y\\z\end{pmatrix}\)
+    }{%
+{\small
+The angle that the line makes with the axes:
+\begin{itemize}
+\item \(x\)-axis: \(\cos\alpha = \frac{x}{|\vec{b}|}\)\\
+\item \(y\)-axis: \(\cos\beta = \frac{y}{|\vec{b}|}\)\\
+\item \(z\)-axis: \(\cos\gamma = \frac{z}{|\vec{b}|}\)
+\end{itemize}
+}
 }
 
-\IndexCard{
+\IndexCard{%
 Polar graph \(r=p \sec(\alpha-\theta)\)
-    }{
-Straight line\\Convert into \(y=mx+c\) using the addition formula for cosine
+    }{%
+Straight line\\
+Convert into \(y=mx+c\) using the addition formula for cosine
 }
 
-\IndexCard{
+\IndexCard{%
 Polar graph \(r=a\)
-    }{
+    }{%
 Circle centre the pole, radius \(a\)
 }
 
-\IndexCard{
+\IndexCard{%
 Polar graph \(r=2a\cos \theta\)
-    }{
+    }{%
 Circle centre \((a,0)\), radius \(a\)\\
 One symmetric petal
 }
 
-\IndexCard{
+\IndexCard{%
 Polar graph \(r=\theta\)
-    }{
+    }{%
 Spiral centred at origin
 }
 
-\IndexCard{
+\IndexCard{%
 Polar graph \(r=a\cos n\theta\)
-    }{
-Only considering \(r\geqslant 0\) \\Rose with \(n\) petals spaced at \(\frac{2\pi}{n}\) starting at \((a,0)\)
+    }{%
+Only considering \(r\geqslant 0\) \\
+Rose with \(n\) petals spaced at \(\frac{2\pi}{n}\) starting at \((a,0)\)
 }
 
-\IndexCard{
-Polar graph \(r=p+q\cos \theta\)\\ \(q\leqslant p<2q\)
-    }{
-Concave curve ``dimple" shaped limaçon
+\IndexCard{%
+Polar graph \(r=p+q\cos \theta\)\\
+\(q\leqslant p<2q\)
+    }{%
+Concave curve ``dimple'' shaped limaçon
 }
 
-\IndexCard{
-Polar graph \(r=p+q\cos \theta\)\\ \(p=q\)
-    }{
-Cardioid\\
+\IndexCard{%
+Polar graph \(r=p+q\cos \theta\)\\
+ \(p=q\)
+    }{%
+Cardioid
 }
 
-\IndexCard{
-Polar graph \(r=p+q\cos \theta\)\\\(p\geqslant 2q\)
-    }{
- Convex curve ``egg" shaped limaçon
+\IndexCard{%
+Polar graph \(r=p+q\cos \theta\)\\
+\(p\geqslant 2q\)
+    }{%
+ Convex curve ``egg'' shaped limaçon
 }
 
-\IndexCard{
+\IndexCard{%
 Polar graph \(r^2=a^2\cos 2\theta\)
-    }{
-Leminscate (figure-8 shaped)\\ starting at \((a,0)\)
+    }{%
+Leminscate (figure-8 shaped)\\ 
+starting at \((a,0)\)
 }
 \end{document}
